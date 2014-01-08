@@ -1,0 +1,41 @@
+<%
+  subtitle = config.title;
+  if (is_archive()){
+    subtitle += ' > Archives';
+
+    if (is_month()){
+      subtitle += ' > ' + page.year + ' > ' + page.month;
+    } else if (is_year()){
+      subtitle += ' > ' + page.year;
+    }
+  } else if (is_category()){
+    subtitle += ' > Category > ' + page.category;
+  } else if (is_tag()){
+    subtitle += '> Tag > ' + page.tag;
+  } else {
+    subtitle = config.subtitle;
+  }
+%>
+<header class="clearfix">
+  <div class="sidebar-block section" id="sidebar-block"><div class="widget Header" id="Header1">
+    <div id="header-inner">
+      <div class="titlewrapper">
+        <h1 class="title">
+          <%= config.title %>
+        </h1>
+      </div>
+      <div class="descriptionwrapper">
+        <p class="description"><span><%= subtitle %></span></p>
+      </div>
+    </div>
+  </div></div>
+  <nav>
+    <div class="profil-top">
+      <div class="right-profil section" id="right-profil"><div class="widget Profile" id="Profile1">
+        <a href="<%- theme.personal.vcard %>"><img alt="My Photo" class="profile-img" height="80" src="<%- theme.personal.figure %>" width="80"></a>
+        <a class="profile-link" href="<%- theme.personal.vcard %>" rel="author"><%- theme.personal.slogan %></a>
+        <div class="clear"></div>
+      </div></div>
+    </div>
+  </nav>
+</header>

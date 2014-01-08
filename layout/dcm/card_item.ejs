@@ -1,0 +1,52 @@
+<%
+  if (post.photos.length == 0) {
+    thumb_img = "http://2.bp.blogspot.com/-LWxQFrq6kro/UVdKR1WAwPI/AAAAAAAABSE/rtfou_My3fg/s215-c/541b25d56456f72097d89355788f5b24.jpg";
+  } else {
+    thumb_img = post.photos[0];
+  }
+
+  snippet = post.content.replace(/<(?:.|\n)*?>/gm, '').substr(0, 100);
+%>
+<div class="post-outer"><div class="entry">
+  <a name="<%= post.layout %>-<%= post.slug %>"></a>
+  <div class="post-body entry-content" id="<%= post.layout %>-<%= post.slug %>" itemprop="articleBody">
+    <article class="box-home">
+      <div class="thumbz-home" data-delay="3000" data-initdelay="100" data-mode="flip-list" id="tes">
+        <h1 class="absolute-h1"><%= post.date.format("D MMM") %></h1>
+        <a href="<%- post.permalink %>">
+          <img class="thumb-home-img" src="<%- thumb_img %>">
+        </a>
+        <div class="thumb-bottom-1">
+          <p class="title-thumb">
+            <a class="title" href="<%- post.permalink %>"><%- post.title %></a>
+          </p>
+          <p class="intro-1">
+            <%- snippet %>...
+            <br clear="all" />
+          </p>
+          <!-- TODO: blogger shareButtons
+          <span class="post-share-buttons goog-inline-block"></span>
+          -->
+          <span class="con-3">
+            <span class="post-labels">
+            <% if (post.tags && post.tags.length){ %>
+              <% post.tags.forEach(function(tag) { %>
+                <a href="<%= config.root + tag.path %>" rel="tag"><%= tag.name %></a>
+              <% }); %>
+            <% } %>
+            </span>
+          </span>
+          <a class="more" href="<%- post.permalink %>"></a>
+          <a class="zoom ajax" href="<%- thumb_img %>" title="<%- post.title %>"></a>
+        </div>
+        <div class="thumb-bottom-2">
+          <h3 class="post-title entry-title" itemprop="name">
+            <a class="ajax" href="<%- post.permalink %>"><%- post.title %></a>
+          </h3>
+        </div>
+      </div>
+      <div class="post-meta11"></div>
+    </article>
+  </div>
+  <div class="clear">
+</div></div>

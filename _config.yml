@@ -1,4 +1,10 @@
 # Header
+personal:
+  figure: http://lh4.googleusercontent.com/-XEf0G3zWzjY/AAAAAAAAAAI/AAAAAAAAAAA/r2muasfnHgw/s96-c/photo.jpg
+  slogan: less is MORE
+  vcard: //kywi.github.io
+
+# Left Menu
 menu:
   Home:
     google: //google.com
@@ -42,7 +48,7 @@ widgets:
 - recent_posts
 
 # Miscellaneous
-google_analytics:
 favicon: /favicon.png
+google_analytics:
 twitter:
 google_plus:

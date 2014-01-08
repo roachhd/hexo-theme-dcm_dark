@@ -1,0 +1,27 @@
+<div id="wrapper">
+<div class="container">
+<div class="row">
+  <%- partial('header_title') %>
+  <div class="clear"></div>
+  <div id="search-box">
+    <div class="search-main">
+      <form action="http://dcmdark-btemplates.blogspot.tw/search/" id="search-form" method="get">
+        <input id="search-text" name="q" placeholder="Search.." type="text">
+        <input id="search-submit" name="" type="submit" value="Enter">
+      </form>
+      <a class="close" href="#" title="close">×</a>
+    </div>
+  </div>
+  <div id="main-content"><div class="eightcol">
+    <div id='container'><div class='blog-posts hfeed'><div class="date-outer"><div class="date-posts">
+      <% page.posts.each(function(post) { %>
+        <%- partial('card_item', {post: post}) %>
+      <% }) %>
+    </div></div></div></div>
+    <div class='blog-pager' id='blog-pager'>
+    </div>
+    <div class="clear"></div>
+  </div></div>
+</div>
+</div>
+</div>
