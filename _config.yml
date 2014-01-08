@@ -34,9 +34,19 @@ links:
   linkedin: //
 rss: /atom.xml
 
-# Content
+
+## Content
+
+# Random pick one for post cover if there is no images in the post.
+# Best resolution is 215x215
+covers:
+  - http://2.bp.blogspot.com/-LWxQFrq6kro/UVdKR1WAwPI/AAAAAAAABSE/rtfou_My3fg/s215-c/541b25d56456f72097d89355788f5b24.jpg
+  - http://2.bp.blogspot.com/-x4NcO_bBKyo/UVdKR1vIh4I/AAAAAAAABSA/Zi6-_ejrLzw/s215-c/79b6ad17e529e02491985c51a0b6c73c.jpg
+  - http://1.bp.blogspot.com/-ZpiQPlJHR4U/UVdKSy5WgtI/AAAAAAAABSQ/-kVP-TKIjH0/s215-c/c38777851531efc787fe05333b8091cf.jpg
+  - http://3.bp.blogspot.com/-oN8WPm5ZCdM/UVdKVTvPglI/AAAAAAAABSk/y9-HHSD8TZA/s215-c/fcfb55cac45027f39a0da763a3104c39.jpg
 excerpt_link: Read More
 fancybox: true
+
 
 # Sidebar
 sidebar: right
