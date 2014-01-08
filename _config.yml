@@ -1,0 +1,48 @@
+# Header
+menu:
+  Home:
+    google: //google.com
+    flickr: //flickr.com
+    facebook: //facebook.com
+  Insite:
+    archive: /archive
+    submenu1: /
+    submenu2: /
+    submenu3: /
+  Dropdown1:
+    submenu1: //
+    submenu2: //
+    submenu3: //
+  Dropdown2:
+    submenu1: //
+    submenu2: //
+    submenu3: //
+    submenu4: //
+    submenu5: //
+links:
+  google-plus: //google.com
+  facebook: //facebook.com
+  twitter: //
+  vimeo2: //
+  flickr: //
+  linkedin: //
+rss: /atom.xml
+
+# Content
+excerpt_link: Read More
+fancybox: true
+
+# Sidebar
+sidebar: right
+widgets:
+- category
+- tag
+- tagcloud
+- archive
+- recent_posts
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png
+twitter:
+google_plus:

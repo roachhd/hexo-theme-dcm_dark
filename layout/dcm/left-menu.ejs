@@ -1,0 +1,55 @@
+<div class="color" id="hidde-left-menu">
+  <div id="me">
+    <ul id="cbp-vimenu">
+      <li>
+        <a class="icon-sidebar" href="#">Tools</a>
+      </li>
+      <li>
+        <a class="icon-sidebar-close" href="#" style="display:none">Tools</a>
+      </li>
+      <li>
+        <a class="icon-home" href="<%- config.root %>"><%= config.title %></a>
+      </li>
+      <li>
+        <a class="show profil" href="#">Work</a>
+        <ul class="">
+          <% for (var i in theme.links) { %>
+          <li class="icon-<%= i %>"><a href="<%- theme.links[i] %>"><%= i %></a></li>
+          <% } %>
+        </ul>
+      </li>
+      <li class="show-label">
+        <a class="show  icon-tag" href="#">Archive</a>
+        <ul class="labelmenus">
+          <div class="labelsx2  section" id="labelsx2"><div class="widget Label" id="Label11">
+            <% if (site.tags.length){ %>
+              <% site.tags.sort('name').each(function(item){ %>
+            <li><a dir="ltr" href="<%- config.root %><%- item.path %>"><%= item.name %></a></li>
+              <% }); %>
+            <% } %>
+          </div></div>
+        </ul>
+      </li>
+      <li>
+        <a class="icon-search " href="#">Store</a>
+      </li>
+      <% if (theme.rss){ %>
+      <li>
+        <a class="icon-rss" href="<%- theme.rss %>">rss</a>
+      </li>
+      <% } %>
+    </ul>
+    <ul class="menu">
+      <% for (var i in theme.menu) { %>
+      <li>
+        <a href="#"><%= i %></a>
+        <ul style="display: none;">
+        <% for (var j in theme.menu[i]) { %>
+          <li><a href="<%- theme.menu[i][j] %>"><%= j %></a></li>
+        <% } %>
+        </ul>
+      </li>
+      <% } %>
+    </ul>
+  </div>
+</div>
