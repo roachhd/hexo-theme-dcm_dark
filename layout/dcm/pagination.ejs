@@ -1,0 +1,15 @@
+<div class="blog-pager" id="blog-pager">
+  <span id="blog-pager-newer-link">
+    <% if (page.prev) { %>
+    <a class="blog-pager-newer-link" href="<%- config.root %><%- page.prev_link %>" title="Newer Posts">&amp;lsaquo;</a>
+    <% } %>
+  </span>
+  <span id="home-link">
+    <a class="home-link" href="<%- config.root %>"><img src="http://1.bp.blogspot.com/-5NYQvZoFvrE/UYQ370HEeTI/AAAAAAAAItY/A4S1EEcr10w/s000/home.png"></a>
+  </span>
+  <span id="blog-pager-older-link">
+    <% if (page.next) { %>
+    <a class="blog-pager-older-link" href="<%- config.root %><%- page.next_link %>" title="Older Posts">&amp;rsaquo;</a>
+    <% } %>
+  </span>
+</div>

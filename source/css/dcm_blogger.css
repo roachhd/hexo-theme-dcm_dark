@@ -1641,3 +1641,7 @@ li.tot-right .title-head {
 .cboxIE6 #cboxTopLeft, .cboxIE6 #cboxTopCenter, .cboxIE6 #cboxTopRight, .cboxIE6 #cboxBottomLeft, .cboxIE6 #cboxBottomCenter, .cboxIE6 #cboxBottomRight, .cboxIE6 #cboxMiddleLeft, .cboxIE6 #cboxMiddleRight {
   _behavior:expression(this.src=this.src ? this.src:this.currentStyle.backgroundImage.split('"')[1], this.style.background="none", this.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src +",sizingMethod='scale')");
 }
+
+#blog-pager, #sidebar-wrapper .widget {
+  display:none;
+}
