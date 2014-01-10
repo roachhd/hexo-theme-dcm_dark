@@ -65,7 +65,7 @@ a:hover {
   margin: 0px 0 60px 0;
 }
 #wrapper p {
-  font-size: 140%;
+  /* font-size: 140%; */
 }
 header {
   padding: 0 0.7em 0 0;
@@ -1640,8 +1640,4 @@ li.tot-right .title-head {
 }
 .cboxIE6 #cboxTopLeft, .cboxIE6 #cboxTopCenter, .cboxIE6 #cboxTopRight, .cboxIE6 #cboxBottomLeft, .cboxIE6 #cboxBottomCenter, .cboxIE6 #cboxBottomRight, .cboxIE6 #cboxMiddleLeft, .cboxIE6 #cboxMiddleRight {
   _behavior:expression(this.src=this.src ? this.src:this.currentStyle.backgroundImage.split('"')[1], this.style.background="none", this.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src +",sizingMethod='scale')");
-}
-
-#blog-pager, #sidebar-wrapper .widget {
-  display:none;
 }

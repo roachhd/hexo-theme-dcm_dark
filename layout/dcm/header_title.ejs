@@ -1,34 +1,39 @@
 <%
-  subtitle = config.title;
+  subtitle = '';
+  exttitle = '';
   if (is_archive()){
-    subtitle += ' > Archives';
+    exttitle += ' > Archives';
 
     if (is_month()){
-      subtitle += ' > ' + page.year + ' > ' + page.month;
+      exttitle += ' > ' + page.year + ' > ' + page.month;
     } else if (is_year()){
-      subtitle += ' > ' + page.year;
+      exttitle += ' > ' + page.year;
     }
   } else if (is_category()){
-    subtitle += ' > Category > ' + page.category;
+    exttitle += ' > Category > ' + page.category;
   } else if (is_tag()){
-    subtitle += '> Tag > ' + page.tag;
+    exttitle += ' > Tag > ' + page.tag;
   } else {
     subtitle = config.subtitle;
   }
 %>
 <header class="clearfix">
-  <div class="sidebar-block section" id="sidebar-block"><div class="widget Header" id="Header1">
-    <div id="header-inner">
-      <div class="titlewrapper">
-        <h1 class="title">
-          <%= config.title %>
-        </h1>
-      </div>
-      <div class="descriptionwrapper">
-        <p class="description"><span><%= subtitle %></span></p>
-      </div>
+  <% if (type == 'list') { %>
+  <div id="header-inner">
+    <div class="titlewrapper">
+      <h1 class="title">
+        <%= config.title %><span style="font-size: .6em; padding: 0 0 0 10px"><%= exttitle %></span>
+      </h1>
     </div>
-  </div></div>
+    <div class="descriptionwrapper">
+      <p class="description"><span><%= subtitle %></span></p>
+    </div>
+  </div>
+  <% } else if (type == 'post') { %>
+  <h3>
+    <a href="<%- config.root %>"><%- post.title %></a>
+  </h3>
+  <% } %>
   <nav>
     <div class="profil-top">
       <div class="right-profil section" id="right-profil"><div class="widget Profile" id="Profile1">

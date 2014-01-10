@@ -1,0 +1,75 @@
+
+<div id="wrapper"><div class="container"><div class="row">
+  <%- partial('header_title', {type: 'post'}) %>
+  <div class="clear"></div>
+  <div id="search-box">
+    <div class="search-main">
+      <form action="http://dcmdark-btemplates.blogspot.tw/search/" id="search-form" method="get">
+        <input id="search-text" name="q" placeholder="Search.." type="text">
+        <input id="search-submit" name="" type="submit" value="Enter">
+      </form>
+      <a class="close" href="#" title="close">×</a>
+    </div>
+  </div>
+  <div id="main-content"><div class="eightcol"><div class="main section" id="main-inn"><div class="widget">
+    <div id="container"><div class='blog-posts hfeed'>
+      <!-- google_ad_section_start(name=default) -->
+      <div class="date-outer"><div class="date-posts"><div class="post-outer">
+        <div class="entry">
+          <a name="<%= post.layout %>-<%= post.slug %>"></a>
+          <div class="post-body entry-content">
+            <h3 class="post-title entry-title" style="font-size:.8em">
+              <%- partial('post/tag') %> at <%= post.date.format("YYYY.MM.DD") %>
+            </h3>
+            <div class="tab_content" style="display: block;"><div class='posting'>
+              <%- post.content %>
+              <div class="clear"></div>
+              <!-- span share buttons -->
+              <% if (post.comments && config.disqus_shortname){ %>
+              <section id="comments">
+                <div id="disqus_thread">
+                  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </div>
+              </section>
+              <% } %>
+            </div></div>
+            <div class="clear"></div>
+            <div class="bottom-m"><div class="post-footer">
+              <div class="clear"></div>
+              <div class="blog-pager" id="blog-pager">
+              <span id="blog-pager-newer-link" style="margin-top: 4px">
+                <% if (post.prev) { %>
+                <a class="blog-pager-newer-link" href="<%- config.root %><%- post.prev_link %>" style="font-size:14px;"> &larr; Prev </a>
+                <% } else { %>
+                <a class="blog-pager-newer-link" href="<%- config.root %>" style="font-size:14px;"><%- config.title %></a>
+                <% } %>
+              </span>
+              <span id="home-link" style="margin-top: 4px">
+                <a class="home-link" href="<%- config.root %>"><img src="http://1.bp.blogspot.com/-5NYQvZoFvrE/UYQ370HEeTI/AAAAAAAAItY/A4S1EEcr10w/s000/home.png"></a>
+              </span>
+              <span id="blog-pager-older-link" style="margin-top: 4px">
+                <% if (post.next) { %>
+                <a class="blog-pager-older-link" href="<%- config.root %><%- post.next_link %>" style="font-size:14px;"> Next &rarr; </a>
+                <% } else { %>
+                <a class="blog-pager-older-link" href="<%- config.root %>" style="font-size:14px;"><%- config.title %></a>
+                <% } %>
+              </span>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div></div></div>
+      <!-- google_ad_section_end -->
+    </div></div>
+    <div class="clear"></div>
+  </div></div></div></div>
+  <div id="sidebar-wrapper"><div class="fourcol last">
+    <div class="widget HTML" id="HTML1">
+    <h2 class="title" style="cursor: pointer; display: block; overflow: hidden;">Blogroll</h2>
+    <div class="widget-content" style="overflow: hidden; display: block;">
+    <ul><li><a href="http://btemplates.com" title="Blogger templates">BTemplates</a></li><li><a href="http://blog.btemplates.com">BTemplates Blog</a></li><li><a href="http://urang-kurai.blogspot.com">Urangkurai</a></li></ul>
+    </div>
+    <div class="clear"></div>
+    </div>
+  </div></div>
+</div></div></div>
